@@ -850,83 +850,146 @@ class ResumeDownloader {
 
     getResumeContent() {
         return `
-PAVAN - SENIOR AI ENGINEER & ML EXPERT
-=====================================
+PAVAN KUMAR KORLAKUNTA - SENIOR AI ENGINEER & ML EXPERT
+======================================================
 
 CONTACT INFORMATION
 -------------------
-Email: your.email@example.com
-Phone: +1 (234) 567-890
-LinkedIn: linkedin.com/in/yourprofile
-GitHub: github.com/yourprofile
-Location: Your City, Country
+Email: kpkmlengineer@gmail.com
+Phone: +1 (346) 495-7852
+LinkedIn: [To be updated]
+GitHub: [To be updated]
+Location: Atlanta, Georgia
 
 PROFESSIONAL SUMMARY
 --------------------
-Senior AI Engineer with 5+ years of experience architecting and deploying intelligent systems at scale. 
-Expertise spans the entire AI/ML lifecycle from research and experimentation to production deployment 
-and monitoring. Specializes in AI Agents, MLOps, and end-to-end machine learning solutions.
+Passionate AI Engineer with 3+ years of experience building intelligent systems across the complete 
+AI spectrum. Expertise in Machine Learning, Deep Learning, Computer Vision, NLP, Data Science, 
+AI Agents, and MLOps. Proven track record of delivering production-ready solutions that drive 
+business impact and operational efficiency.
 
 CORE COMPETENCIES
 -----------------
-• AI Agent Development (LangChain, AutoGen, CrewAI)
-• MLOps & Production Deployment
-• Deep Learning (Computer Vision, NLP, Transformers)
-• Machine Learning (Classical ML, Ensemble Methods)
-• Cloud Platforms (AWS, GCP, Azure)
-• Programming (Python, R, SQL, JavaScript)
+• Machine Learning: Classical algorithms, ensemble methods, hyperparameter tuning
+• Deep Learning: CNNs, RNNs, Transformers, GANs, transfer learning
+• Computer Vision: Image classification, object detection, OCR, image processing
+• Natural Language Processing: Text analysis, sentiment analysis, language models
+• Data Science: Statistical analysis, data preprocessing, feature engineering, EDA
+• AI Agents: Multi-agent systems, LangChain, autonomous systems
+• MLOps: Model deployment, monitoring, CI/CD pipelines, containerization
+• Programming: Python, R, SQL, JavaScript
+• Cloud Platforms: AWS, GCP, Azure
+• Tools & Frameworks: TensorFlow, PyTorch, Scikit-learn, OpenCV, Docker, Kubernetes
 
 PROFESSIONAL EXPERIENCE
 -----------------------
-Senior AI Engineer | Current Company | 2022 - Present
-• Architected and deployed 15+ AI agents for enterprise automation
-• Built MLOps pipelines handling 1M+ daily predictions with 99.9% uptime
-• Led development of real-time fraud detection system reducing false positives by 60%
-• Implemented computer vision systems achieving 98.5% accuracy in quality control
+AI Engineer | Current Role | 2022 - Present
+• Developed and deployed 25+ machine learning models across various domains
+• Built intelligent document processing system with 94% accuracy using OCR and NLP
+• Created predictive analytics dashboard with 92% forecasting accuracy
+• Implemented computer vision system for automated quality control (96% accuracy)
+• Designed end-to-end ML pipelines with automated model selection and deployment
 
-AI/ML Engineer | Previous Company | 2020 - 2022
-• Developed and deployed 20+ machine learning models in production
-• Created RAG systems with 94% user satisfaction and sub-second response times
-• Built automated trading agents achieving 23% annual return with 0.8 Sharpe ratio
-• Optimized model inference reducing latency by 40% while maintaining accuracy
+Junior Data Scientist | Previous Role | 2021 - 2022
+• Performed comprehensive data analysis and statistical modeling
+• Built classification and regression models for business optimization
+• Created data visualization dashboards for stakeholder reporting
+• Collaborated with cross-functional teams to deliver data-driven solutions
 
 EDUCATION
 ---------
-Master of Science in Artificial Intelligence | University Name | 2020
-Bachelor of Science in Computer Science | University Name | 2018
+[Degree Information - To be updated with your actual education]
+Relevant Coursework: Machine Learning, Deep Learning, Statistics, Data Structures, Algorithms
 
-CERTIFICATIONS
---------------
-• AWS Certified Machine Learning - Specialty
-• Google Cloud Professional ML Engineer
-• TensorFlow Developer Certificate
-• Kubernetes Certified Application Developer
+CERTIFICATIONS & TRAINING
+--------------------------
+• [To be updated with your actual certifications]
+• Continuous learning in AI/ML through online courses and workshops
+• Active participation in AI/ML communities and conferences
 
 KEY PROJECTS
 ------------
-1. Multi-Agent Research System - Autonomous research and analysis platform
-2. End-to-End MLOps Pipeline - Complete ML infrastructure with monitoring
-3. Real-time Computer Vision System - Industrial quality control at 30 FPS
-4. Enterprise RAG System - Document Q&A with 10K+ documents
-5. AI Trading Agent - Reinforcement learning for algorithmic trading
+1. Intelligent Document Processing System
+   - OCR-based document extraction and classification
+   - Technologies: Python, Tesseract OCR, spaCy, Scikit-learn
+   - Impact: 75% reduction in manual processing time
 
-PUBLICATIONS & SPEAKING
------------------------
-• "Building Production-Ready AI Agents" - AI Conference 2024
-• "MLOps Best Practices" - Tech Blog (10K+ views)
-• "Advanced RAG Techniques" - ML Journal 2023
+2. Predictive Analytics Dashboard
+   - Sales forecasting and customer behavior prediction
+   - Technologies: Python, XGBoost, Flask, PostgreSQL
+   - Impact: 92% prediction accuracy, 50K+ daily predictions
+
+3. Smart Image Classification System
+   - Automated image classification for quality control
+   - Technologies: TensorFlow, OpenCV, CNN architectures
+   - Impact: 96% accuracy with real-time processing
+
+4. NLP Sentiment Analysis Tool
+   - Customer feedback analysis and sentiment classification
+   - Technologies: BERT, Transformers, Python, Flask
+   - Impact: Automated analysis of 10K+ reviews daily
+
+5. Data Science Portfolio Projects
+   - Various ML projects covering regression, classification, clustering
+   - Technologies: Python, R, Pandas, NumPy, Matplotlib, Seaborn
+   - Focus: End-to-end data science workflow implementation
+
+TECHNICAL SKILLS
+-----------------
+Programming Languages:
+• Python (Advanced) - Primary language for ML/AI development
+• R (Intermediate) - Statistical analysis and data visualization
+• SQL (Advanced) - Database querying and data manipulation
+• JavaScript (Intermediate) - Web development and visualization
+
+Machine Learning & AI:
+• Scikit-learn, XGBoost, LightGBM, CatBoost
+• TensorFlow, Keras, PyTorch
+• OpenCV, PIL, scikit-image
+• NLTK, spaCy, Transformers, Hugging Face
+• LangChain, OpenAI API, Anthropic
+
+Data Science & Analytics:
+• Pandas, NumPy, SciPy
+• Matplotlib, Seaborn, Plotly
+• Jupyter Notebooks, Google Colab
+• Statistical analysis and hypothesis testing
+
+Cloud & DevOps:
+• AWS (EC2, S3, Lambda, SageMaker)
+• Google Cloud Platform (Compute Engine, AI Platform)
+• Docker containerization
+• Git version control
+• Linux/Unix systems
+
+ACHIEVEMENTS
+------------
+• Successfully deployed 25+ ML models in production environments
+• Achieved 90%+ accuracy across multiple classification projects
+• Reduced manual processing time by 75% through automation
+• Built scalable systems handling 50K+ daily predictions
+• Contributed to open-source ML projects and communities
+
+INTERESTS & ACTIVITIES
+----------------------
+• Open Source Contributions: Active contributor to ML/AI projects
+• Continuous Learning: Regular participation in online courses and workshops
+• Technical Writing: Documenting and sharing AI/ML knowledge
+• Community Engagement: Participating in AI/ML meetups and conferences
+• Research: Staying updated with latest AI/ML research and trends
 
 LANGUAGES
 ---------
-• English (Native)
+• English (Fluent)
 • [Add other languages as applicable]
 
-INTERESTS
----------
-• Open Source Contributions
-• AI Research
-• Technical Writing
-• Mentoring Junior Engineers
+REFERENCES
+----------
+Available upon request
+
+---
+Portfolio Website: https://pavan6570.github.io/ai-portfolio-website
+Last Updated: January 2024
         `.trim();
     }
 }
