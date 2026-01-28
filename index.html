@@ -1844,27 +1844,30 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form action="https://formspree.io/f/xpznvjqr" method="POST" id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <select>
+                            <select name="subject" required>
                                 <option value="">Select Subject</option>
-                                <option value="mentorship">AI Mentorship</option>
-                                <option value="collaboration">Collaboration</option>
-                                <option value="consulting">AI Consulting</option>
+                                <option value="AI Mentorship">AI Mentorship</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="AI Consulting">AI Consulting</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="General Inquiry">General Inquiry</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
+                        <div id="formStatus" style="margin-top: 1rem; text-align: center; display: none;"></div>
                     </form>
                 </div>
             </div>
@@ -1880,23 +1883,28 @@
         // Smooth scrolling navigation
         document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    const headerHeight = 80;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                // Only prevent default for internal links (starting with #)
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const headerHeight = 80;
+                        const targetPosition = targetSection.offsetTop - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                    
+                    // Update active nav
+                    document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                    if (this.classList.contains('nav-link')) {
+                        this.classList.add('active');
+                    }
                 }
-                
-                // Update active nav
-                document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
-                if (this.classList.contains('nav-link')) {
-                    this.classList.add('active');
-                }
+                // External links (LinkedIn, GitHub) will work normally without preventDefault
             });
         });
 
@@ -1934,6 +1942,48 @@
 
         document.querySelectorAll('.phase-card, .project-card, .contact-item, .sidebar-card').forEach(el => {
             observer.observe(el);
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            formStatus.style.display = 'none';
+            
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formStatus.innerHTML = '<div style="color: #10b981; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.3);"><i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.</div>';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error
+                formStatus.innerHTML = '<div style="color: #ef4444; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.3);"><i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again or email me directly at kpkmlengineer@gmail.com</div>';
+                formStatus.style.display = 'block';
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                submitBtn.disabled = false;
+            }
         });
     </script>
 </body>
